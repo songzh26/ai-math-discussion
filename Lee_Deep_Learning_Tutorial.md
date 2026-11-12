@@ -69,4 +69,18 @@ y = b + Σ c_i * sigmoid(b_i + w_i * x)
 最终计算输出 y，将 a 乘上权重并加上偏置：
 **y = b + c^T * a**
 
-后续步骤不变：定义 Loss，用梯度下降优化 θ。
+后续步骤不变定义 Loss，用梯度下降优化 θ。
+
+### 1.2.2 模型变形
+
+**Hard Sigmoid 函数**可以看作两个 **ReLU (Rectified Linear Unit，修正线性单元)** 的叠加。
+
+* 对应的公式：c * max(0, b + w*x_1)
+* **在机器学习中，Sigmoid 和 ReLU 被称为激活函数 (Activation Function)。**
+
+Sigmoid 函数或 ReLU 被称为**神经元**，神经网络就是由这些神经元组成的。
+
+* 每一列神经元称为**隐藏层 (Hidden Layer)**。
+* 深度神经网络的训练会用到**反向传播 (Backpropagation, BP)**，这是一种比较有效的梯度计算方法。
+
+### 1.2.3 机器学习框架
